@@ -26,7 +26,7 @@ public class CTCAndroidInput {
                 
             case EVENT_TYPE_CHAR:
                 // Send the char without checking shit
-                mRobotPeer.keyPressUnchecked(i1);
+                mRobotPeer.keyPressUnchecked((char)i1);
                 break;
                 
             case EVENT_TYPE_MOUSE_BUTTON:
