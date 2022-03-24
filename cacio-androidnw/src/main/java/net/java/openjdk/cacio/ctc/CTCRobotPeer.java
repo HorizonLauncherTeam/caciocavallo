@@ -148,6 +148,18 @@ public class CTCRobotPeer implements RobotPeer {
           CTCEventSource.getInstance().postEvent(ev);
         }
     }
+    
+    public void keyPressUnchecked(char keychar){
+        if (keychar != KeyEvent.CHAR_UNDEFINED) {
+          EventData ev = new EventData();
+          ev.setSource(CTCScreen.getInstance());
+          ev.setId(KeyEvent.KEY_TYPED);
+          ev.setTime(System.currentTimeMillis());
+          ev.setModifiers(0);
+          ev.setKeyChar(keychar);
+          CTCEventSource.getInstance().postEvent(ev);
+        }
+    }
 
     private char getKeyCharFromCodeAndMods(int keyCode, int modifiers) {
         return KeyStrokeMappingFactory.getInstance().getKeyStrokeMapping().getKeyChar(keyCode, modifiers);
