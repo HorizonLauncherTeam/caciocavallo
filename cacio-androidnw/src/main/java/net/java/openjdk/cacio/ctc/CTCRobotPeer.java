@@ -122,6 +122,13 @@ public class CTCRobotPeer implements RobotPeer {
         if (keycode == KeyEvent.VK_SHIFT) {
           currentModifiers |= KeyEvent.SHIFT_MASK;
         }
+        if (keycode == KeyEvent.VK_CAPS_LOCK){
+            if((currentModifiers & KeyEvent.SHIFT_MASK) == KeyEvent.SHIFT_MASK){
+                currentModifiers &= ~KeyEvent.SHIFT_MASK;
+            }else{
+                currentModifiers |= KeyEvent.SHIFT_MASK;
+            }
+        }
         if (keycode == KeyEvent.VK_CONTROL) {
           currentModifiers |= KeyEvent.CTRL_MASK;
         }
