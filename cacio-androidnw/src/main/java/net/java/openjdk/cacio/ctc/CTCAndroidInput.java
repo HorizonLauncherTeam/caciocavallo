@@ -1,7 +1,7 @@
 package net.java.openjdk.cacio.ctc;
 
 public class CTCAndroidInput {
-    public static final int EVENT_TYPE_CHAR = 1000;
+    public static final int EVENT_TYPE_CHAR = 1000; 
     // public static final int EVENT_TYPE_CHAR_MODS = 1001;
     // public static final int EVENT_TYPE_CURSOR_ENTER = 1002;
     public static final int EVENT_TYPE_CURSOR_POS = 1003;
