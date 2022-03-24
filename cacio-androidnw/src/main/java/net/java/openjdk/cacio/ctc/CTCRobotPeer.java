@@ -155,7 +155,7 @@ public class CTCRobotPeer implements RobotPeer {
           ev.setSource(CTCScreen.getInstance());
           ev.setId(KeyEvent.KEY_TYPED);
           ev.setTime(System.currentTimeMillis());
-          ev.setModifiers(0);
+          ev.setModifiers(currentModifiers);
           ev.setKeyChar(keychar);
           CTCEventSource.getInstance().postEvent(ev);
         }
